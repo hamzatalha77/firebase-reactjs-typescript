@@ -9,8 +9,8 @@ export const Login = () => {
    const result = await signInWithPopup(auth,provider)
    console.log(result)
    navigate('/')
-
     }
+    
   return (
     <div>
     <p>sign in with google to continue</p>
