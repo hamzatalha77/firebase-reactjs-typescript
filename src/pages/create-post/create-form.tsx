@@ -43,7 +43,7 @@ export default function CreateForm() {
       <p style={{ color: 'red' }}>{errors.title?.message}</p>
       <textarea placeholder="Description..." {...register('description')} />
       <p style={{ color: 'red' }}>{errors.description?.message}</p>
-      <input type="submit" />
+      <input type="submit" className="submit-button" />
     </form>
   )
 }
