@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router,Routes,Route}from 'react-router-dom'
-import { Main } from './pages/main';
+import { Main } from './pages/main/main';
 import { Login } from './pages/login';
 import { Navbar } from './components/Navbar';
-import { CreatePost } from './create-post/create-post';
+import { CreatePost } from './pages/create-post/create-post';
 
 function App() {
   return (
