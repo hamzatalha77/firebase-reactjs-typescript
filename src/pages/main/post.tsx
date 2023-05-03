@@ -6,18 +6,20 @@ import { useEffect, useState } from 'react'
 interface Props {
   post: IPost
 }
-
+interface Like {
+  userId: string
+}
 export const Post = (props: Props) => {
   const { post } = props
   const [user] = useAuthState(auth)
 
-  const [likeAmount, setLikeAmount] = useState<number | null>(null)
+  const [like, setLike] = useState<Like[] | null>(null)
 
   const likesRef = collection(db, 'likes')
   const likesDoc = query(likesRef, where('postId', '==', post.id))
   const getLikes = async () => {
     const data = await getDocs(likesDoc)
-    setLikeAmount(data.docs.length)
+    setLike(data.docs.map((doc) => ({ userId: doc.data().userId })))
   }
   const addLike = async () => {
     await addDoc(likesRef, {
@@ -39,7 +41,7 @@ export const Post = (props: Props) => {
       <div className="footer">
         <p>@{post.username}</p>
         <button onClick={addLike}>&#128077;</button>
-        {likeAmount && <p>Likes {likeAmount}</p>}
+        {like && <p>Likes {like?.length}</p>}
       </div>
     </div>
   )
