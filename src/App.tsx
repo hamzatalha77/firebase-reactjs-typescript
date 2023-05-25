@@ -5,7 +5,7 @@ import { Main } from './pages/main/main'
 import { Login } from './pages/login'
 import { Navbar } from './components/Navbar'
 import { CreatePost } from './pages/create-post/create-post'
-import  {Any}
+import { Anytest } from './pages/learn/anytest'
 function App() {
   return (
     <div className="App">
