@@ -15,6 +15,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/login" element={<Login />} />
           <Route path="/createpost" element={<CreatePost />} />
+          <Route path="/anytestpage" element={<Anytest />} />
         </Routes>
       </Router>
     </div>
