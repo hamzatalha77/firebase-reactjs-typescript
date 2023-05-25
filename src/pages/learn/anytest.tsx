@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Anytest = () => {
+const AnyTest = () => {
   return <div>anytest</div>
 }
 
-export default Anytest
+export default AnyTest

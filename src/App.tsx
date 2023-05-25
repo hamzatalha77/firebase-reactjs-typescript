@@ -5,7 +5,7 @@ import { Main } from './pages/main/main'
 import { Login } from './pages/login'
 import { Navbar } from './components/Navbar'
 import { CreatePost } from './pages/create-post/create-post'
-import { Anytest } from './pages/learn/anytest'
+import { AnyTest } from './pages/learn/anytest'
 function App() {
   return (
     <div className="App">
@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/login" element={<Login />} />
           <Route path="/createpost" element={<CreatePost />} />
-          <Route path="/anytestpage" element={<Anytest />} />
+          <Route path="/anytestpage" element={<AnyTest />} />
         </Routes>
       </Router>
     </div>
